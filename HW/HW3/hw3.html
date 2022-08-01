@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+
+    // Є змінна х, якій ви надаєте довільне числове значення.
+    // Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'.
+    // Перевірте  скрипт при a, що дорівнює 1, 0, -3
+
+    let x = 99;
+    if ( x !== 0) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+
+    x = 1;
+    if ( x !== 0) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+
+     x = 0;
+    if ( x !== 0) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+
+     x = -3;
+    if ( x !== 0) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+
+
+
+
+    // - Дано змінну time яка рівна числу від 0 до 59.
+    // Потрібно написати код, який перевірить, до якої четверті години попадає число
+    // (в першу, другу, третю или четверту частину години).
+
+   let time = prompt('введіть число від 0 до 59');
+   if (time <= 15) {
+       console.log('число знаходиться у першій половині години');
+   }else if (time <= 30) {
+       console.log('число знаходиться у другій половині години');
+   }else if (time <= 45) {
+       console.log('число знаходиться у третій половині години');
+   }else if (time <= 59) {
+       console.log('число знаходиться у четвертій половині години');
+   }
+
+    // - У змінній day дано якесь число від 1 до 31.
+    // Потрібно визначити, у яку половину(декаду)
+    // місяця потрапляє це число (у першу, другу чи третю).
+
+
+    let day = prompt('введіть число від 1 до 31');
+    if (day <= 10) {
+        console.log('день знаходиться у першій декаді');
+    }else if (day <= 20) {
+        console.log('день знаходиться у другій декаді');
+    }else if (day <= 31) {
+        console.log('день знаходиться у третій декаді');
+    }
+
+        //  - Скласти розклад на тиждень за домопоги switch.
+        // Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день
+        // (можна замість плану на день, назву дня англійською).
+
+    switch ('enter day') {
+        case 'day1': console.log('Monday');
+        break;
+        case 'day2': console.log('Tuesday');
+            break;
+        case 'day3': console.log('Wednesday');
+            break;
+        case 'day4': console.log('Thursday ');
+            break;
+        case 'day5': console.log('Friday');
+            break;
+        case 'day6': console.log('Saturday ');
+            break;
+        case 'day7': console.log('Sunday');
+            break;
+    }
+
+    // - Користувач вводить або має два числа.
+    //     Потрібно знайти та вивести максимальне число з тих двох .
+    //     Також потрібно врахувати коли введені рівні числа.
+
+
+    let a = +prompt('enter number 1');
+    let b = +prompt('enter number 2');
+
+    if (a > b) {
+       console.log('max number');
+    } else if (a < b) {
+        console.log('min number');
+    } else {
+        console.log('numbers same');
+    }
+
+
+        // - є змінна х, яка може прийняти будь-яке значення
+        // (стрінг, число, undefined, null  і тд включно). Напишіть код який,
+        // за допомоги  оператора || буде присвоювати змінній х значення "default"
+        // якщо значення змінної х являється falsy (хибноподыбне, тобто кастується до false)
+
+
+    let y = NaN || 'default';
+    console.log(y);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
