@@ -1,0 +1,17 @@
+.product-card{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+};
+
+.product-title{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
