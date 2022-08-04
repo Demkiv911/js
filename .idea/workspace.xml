@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ed0fc63-d5e1-4ad0-a660-25086d961a27" name="Changes" comment="changed" />
+    <list default="true" id="7ed0fc63-d5e1-4ad0-a660-25086d961a27" name="Changes" comment="add h/w 4">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/HW4/hw4.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW/HW4/hw4.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -43,6 +48,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Новий проект/js&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.emmet&quot;
   }
@@ -77,6 +83,11 @@
       <workItem from="1659079966487" duration="16457000" />
       <workItem from="1659342758623" duration="5461000" />
       <workItem from="1659510439845" duration="6545000" />
+      <workItem from="1659518307959" duration="1123000" />
+      <workItem from="1659520459749" duration="13912000" />
+      <workItem from="1659546364869" duration="601000" />
+      <workItem from="1659599902663" duration="1681000" />
+      <workItem from="1659678429467" duration="27514000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1658736660240</created>
@@ -176,7 +187,35 @@
       <option name="project" value="LOCAL" />
       <updated>1659348294673</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="changed">
+      <created>1659518387766</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1659518387766</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add h/w 4">
+      <created>1659534463876</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1659534463876</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add h/w 4">
+      <created>1659600413783</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1659600413783</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add h/w 4">
+      <created>1659600449310</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1659600449310</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +238,7 @@
     <MESSAGE value="changed h/w 2" />
     <MESSAGE value="add h/w 2" />
     <MESSAGE value="changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed" />
+    <MESSAGE value="add h/w 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="add h/w 4" />
   </component>
 </project>
