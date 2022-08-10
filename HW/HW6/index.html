@@ -12,63 +12,63 @@
     // - Знайти та вивести довижину настипних стрінгових значень
     // 'hello world', 'lorem ipsum', 'javascript is cool'
 
-    let str = 'hello world';
-    console.log(str.length);
-
-    let str1 = 'lorem ipsum';
-    console.log(str1.length);
-
-    let str2 = 'javascript is cool';
-    console.log(str2.length);
+    // let str = 'hello world';
+    // console.log(str.length);
+    //
+    // let str1 = 'lorem ipsum';
+    // console.log(str1.length);
+    //
+    // let str2 = 'javascript is cool';
+    // console.log(str2.length);
 
 
     // - Перевести до великого регістру наступні стрінгові значення
     // 'hello world', 'lorem ipsum', 'javascript is cool'
 
-    let str3 = 'hello world';
-    console.log(str3.toUpperCase());
-
-    let str4 = 'lorem ipsum';
-    console.log(str4.toUpperCase());
-
-    let str5 = 'javascript is cool';
-    console.log(str5.toUpperCase());
+    // let str3 = 'hello world';
+    // console.log(str3.toUpperCase());
+    //
+    // let str4 = 'lorem ipsum';
+    // console.log(str4.toUpperCase());
+    //
+    // let str5 = 'javascript is cool';
+    // console.log(str5.toUpperCase());
 
 
     // - Перевести до нижнього регістру настипні стрінгові значення
     // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
     //
-    let str6 = 'HELLO WORLD';
-    console.log(str6.toLowerCase());
-
-    let str7 = 'LOREM IPSUM';
-    console.log(str7.toLowerCase());
-
-    let str8 = 'JAVASCRIPT IS COOL';
-    console.log(str8.toLowerCase());
+    // let str6 = 'HELLO WORLD';
+    // console.log(str6.toLowerCase());
+    //
+    // let str7 = 'LOREM IPSUM';
+    // console.log(str7.toLowerCase());
+    //
+    // let str8 = 'JAVASCRIPT IS COOL';
+    // console.log(str8.toLowerCase());
 
 
     // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
     //
 
-    let str9 = ' dirty string   ';
-    console.log(str9.substring(1, 13));
+    // let str9 = ' dirty string   ';
+    // console.log(str9.substring(1, 13));
 
 
     // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
     //     let str = 'Ревуть воли як ясла повні';
     // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
 
-    let str10 = 'Ревуть воли як ясла повні';
-    let words = str10.split(' ');
-    console.log(words)
+    // let str10 = 'Ревуть воли як ясла повні';
+    // let words = str10.split(' ');
+    // console.log(words)
 
 
     // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
 
-    let numbers = [10,8,-7,55,987,-1011, 'string', 0,1050,0];
-    let map = numbers.map(value => value.toString());
-    console.log(map)
+    // let numbers = [10,8,-7,55,987,-1011, 'string', 0,1050,0];
+    // let map = numbers.map(value => value.toString());
+    // console.log(map);
 
     // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого,
     // або навпаки в залежності від значення аргументу direction.
@@ -77,10 +77,18 @@
     // sortNums(nums,'descending') // [21,11,3]
 
     let nums = [11,21,3];
-    nums.sort((num1, num2)=> num1 - num2);
-    console.log(nums)
-    nums.sort((num1, num2)=> num2 - num1);
-    console.log(nums)
+    let sortNums = (array,direction) =>{
+        if (direction==='+'){
+            array.sort((num1,num2)=> num1-num2)
+        }else if (direction==='-'){
+            array.sort((num1,num2)=> num2-num1)
+        }
+        return array
+    };
+    console.log(sortNums(nums,'-'));
+
+
+
 
 
     // - є масив
@@ -92,21 +100,17 @@
         {title: 'FullStack', monthDuration: 7},
         {title: 'Frontend', monthDuration: 4}
     ];
+
     // -- відсортувати його за спаданням за monthDuration
     // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 
     coursesAndDurationArray.sort((obj1, obj2)=>  obj2.monthDuration -  obj1.monthDuration);
     console.log(coursesAndDurationArray);
 
-    let filter = [];
-    for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
-    if (coursesAndDurationArrayElement.monthDuration > 5){
-    filter.push(coursesAndDurationArrayElement)
-    }}
-    console.log(filter)
+    let curs = coursesAndDurationArray.filter(value => value.monthDuration > 5);
+    console.log(curs);
 
 
-    //
     // описати колоду карт
     // - знайти піковий туз
     // - всі шістки
@@ -132,99 +136,99 @@
     // }
 
 
-    let cards = [
-        {cardSuit: 'clubs', value: 'Ace', color:'black'},
-        {cardSuit: 'clubs', value: 2, color:'black'},
-        {cardSuit: 'clubs', value: 3, color:'black'},
-        {cardSuit: 'clubs', value: 4, color:'black'},
-        {cardSuit: 'clubs', value: 5, color:'black'},
-        {cardSuit: 'clubs', value: 6, color:'black'},
-        {cardSuit: 'clubs', value: 7, color:'black'},
-        {cardSuit: 'clubs', value: 8, color:'black'},
-        {cardSuit: 'clubs', value: 9, color:'black'},
-        {cardSuit: 'clubs', value: 10, color:'black'},
-        {cardSuit: 'clubs', value: 'Jack', color:'black'},
-        {cardSuit: 'clubs', value: 'Queen', color:'black'},
-        {cardSuit: 'clubs', value: 'King', color:'black'},
-
-        {cardSuit: 'diamonds', value: 'Ace', color:'red'},
-        {cardSuit: 'diamonds', value: 2, color:'red'},
-        {cardSuit: 'diamonds', value: 3, color:'red'},
-        {cardSuit: 'diamonds', value: 4, color:'red'},
-        {cardSuit: 'diamonds', value: 5, color:'red'},
-        {cardSuit: 'diamonds', value: 6, color:'red'},
-        {cardSuit: 'diamonds', value: 7, color:'red'},
-        {cardSuit: 'diamonds', value: 8, color:'red'},
-        {cardSuit: 'diamonds', value: 9, color:'red'},
-        {cardSuit: 'diamonds', value: 10, color:'red'},
-        {cardSuit: 'diamonds', value: 'Jack', color:'red'},
-        {cardSuit: 'diamonds', value: 'Queen', color:'red'},
-        {cardSuit: 'diamonds', value: 'King', color:'red'},
-
-        {cardSuit: 'hearts', value: 'Ace', color:'red'},
-        {cardSuit: 'hearts', value: 2, color:'red'},
-        {cardSuit: 'hearts', value: 3, color:'red'},
-        {cardSuit: 'hearts', value: 4, color:'red'},
-        {cardSuit: 'hearts', value: 5, color:'red'},
-        {cardSuit: 'hearts', value: 6, color:'red'},
-        {cardSuit: 'hearts', value: 7, color:'red'},
-        {cardSuit: 'hearts', value: 8, color:'red'},
-        {cardSuit: 'hearts', value: 9, color:'red'},
-        {cardSuit: 'hearts', value: 10, color:'red'},
-        {cardSuit: 'hearts', value: 'Jack', color:'red'},
-        {cardSuit: 'hearts', value: 'Queen', color:'red'},
-        {cardSuit: 'hearts', value: 'King', color:'red'},
-        {value: 'Joker', color:'red'},
-
-        {cardSuit: 'spades', value: 'Ace', color:'black'},
-        {cardSuit: 'spades', value: 2, color:'black'},
-        {cardSuit: 'spades', value: 3, color:'black'},
-        {cardSuit: 'spades', value: 4, color:'black'},
-        {cardSuit: 'spades', value: 5, color:'black'},
-        {cardSuit: 'spades', value: 6, color:'black'},
-        {cardSuit: 'spades', value: 7, color:'black'},
-        {cardSuit: 'spades', value: 8, color:'black'},
-        {cardSuit: 'spades', value: 9, color:'black'},
-        {cardSuit: 'spades', value: 10, color:'black'},
-        {cardSuit: 'spades', value: 'Jack', color:'black'},
-        {cardSuit: 'spades', value: 'Queen', color:'black'},
-        {cardSuit: 'spades', value: 'King', color:'black'},
-        {value: 'Joker', color:'black'},
-
-    ];
-
-   let filter0 = cards.filter(value => value.value==='Ace' && value.color==='black' && value.cardSuit==='spades');
-   console.log(filter0);
-
-    let filter1 = cards.filter(value => value.value===6);
-    console.log(filter1);
-
-    let filter2 = cards.filter(value => value.color==='red');
-    console.log(filter2);
-
-    let filter3 = cards.filter(value => value.cardSuit==='diamonds');
-    console.log(filter3);
-
-    let filter4 = cards.filter(value => value.value > 8+ ''  && value.cardSuit==='clubs'  );
-    console.log(filter4);
-
-    let reduce = cards.reduce(function (accumulator, card) {
-        if (card.cardSuit==='spades'){
-            accumulator.spades.push(card);
-
-        }else  if (card.cardSuit==='diamonds'){
-            accumulator.diamonds.push(card);
-
-        }else  if (card.cardSuit==='hearts'){
-            accumulator.hearts.push(card);
-
-        } else  if (card.cardSuit==='clubs'){
-                accumulator.clubs.push(card);
-        }
-    return accumulator;
-
-    },{spades:[], diamonds:[], hearts:[], clubs:[]});
-    console.log(reduce);
+   //  let cards = [
+   //      {cardSuit: 'clubs', value: 'Ace', color:'black'},
+   //      {cardSuit: 'clubs', value: 2, color:'black'},
+   //      {cardSuit: 'clubs', value: 3, color:'black'},
+   //      {cardSuit: 'clubs', value: 4, color:'black'},
+   //      {cardSuit: 'clubs', value: 5, color:'black'},
+   //      {cardSuit: 'clubs', value: 6, color:'black'},
+   //      {cardSuit: 'clubs', value: 7, color:'black'},
+   //      {cardSuit: 'clubs', value: 8, color:'black'},
+   //      {cardSuit: 'clubs', value: 9, color:'black'},
+   //      {cardSuit: 'clubs', value: 10, color:'black'},
+   //      {cardSuit: 'clubs', value: 'Jack', color:'black'},
+   //      {cardSuit: 'clubs', value: 'Queen', color:'black'},
+   //      {cardSuit: 'clubs', value: 'King', color:'black'},
+   //
+   //      {cardSuit: 'diamonds', value: 'Ace', color:'red'},
+   //      {cardSuit: 'diamonds', value: 2, color:'red'},
+   //      {cardSuit: 'diamonds', value: 3, color:'red'},
+   //      {cardSuit: 'diamonds', value: 4, color:'red'},
+   //      {cardSuit: 'diamonds', value: 5, color:'red'},
+   //      {cardSuit: 'diamonds', value: 6, color:'red'},
+   //      {cardSuit: 'diamonds', value: 7, color:'red'},
+   //      {cardSuit: 'diamonds', value: 8, color:'red'},
+   //      {cardSuit: 'diamonds', value: 9, color:'red'},
+   //      {cardSuit: 'diamonds', value: 10, color:'red'},
+   //      {cardSuit: 'diamonds', value: 'Jack', color:'red'},
+   //      {cardSuit: 'diamonds', value: 'Queen', color:'red'},
+   //      {cardSuit: 'diamonds', value: 'King', color:'red'},
+   //
+   //      {cardSuit: 'hearts', value: 'Ace', color:'red'},
+   //      {cardSuit: 'hearts', value: 2, color:'red'},
+   //      {cardSuit: 'hearts', value: 3, color:'red'},
+   //      {cardSuit: 'hearts', value: 4, color:'red'},
+   //      {cardSuit: 'hearts', value: 5, color:'red'},
+   //      {cardSuit: 'hearts', value: 6, color:'red'},
+   //      {cardSuit: 'hearts', value: 7, color:'red'},
+   //      {cardSuit: 'hearts', value: 8, color:'red'},
+   //      {cardSuit: 'hearts', value: 9, color:'red'},
+   //      {cardSuit: 'hearts', value: 10, color:'red'},
+   //      {cardSuit: 'hearts', value: 'Jack', color:'red'},
+   //      {cardSuit: 'hearts', value: 'Queen', color:'red'},
+   //      {cardSuit: 'hearts', value: 'King', color:'red'},
+   //      {value: 'Joker', color:'red'},
+   //
+   //      {cardSuit: 'spades', value: 'Ace', color:'black'},
+   //      {cardSuit: 'spades', value: 2, color:'black'},
+   //      {cardSuit: 'spades', value: 3, color:'black'},
+   //      {cardSuit: 'spades', value: 4, color:'black'},
+   //      {cardSuit: 'spades', value: 5, color:'black'},
+   //      {cardSuit: 'spades', value: 6, color:'black'},
+   //      {cardSuit: 'spades', value: 7, color:'black'},
+   //      {cardSuit: 'spades', value: 8, color:'black'},
+   //      {cardSuit: 'spades', value: 9, color:'black'},
+   //      {cardSuit: 'spades', value: 10, color:'black'},
+   //      {cardSuit: 'spades', value: 'Jack', color:'black'},
+   //      {cardSuit: 'spades', value: 'Queen', color:'black'},
+   //      {cardSuit: 'spades', value: 'King', color:'black'},
+   //      {value: 'Joker', color:'black'},
+   //
+   //  ];
+   //
+   // let filter0 = cards.filter(value => value.value==='Ace' && value.color==='black' && value.cardSuit==='spades');
+   // console.log(filter0);
+   //
+   //  let filter1 = cards.filter(value => value.value===6);
+   //  console.log(filter1);
+   //
+   //  let filter2 = cards.filter(value => value.color==='red');
+   //  console.log(filter2);
+   //
+   //  let filter3 = cards.filter(value => value.cardSuit==='diamonds');
+   //  console.log(filter3);
+   //
+   //  let filter4 = cards.filter(value => value.value > 8+''  && value.cardSuit==='clubs'  );
+   //  console.log(filter4);
+   //
+   //  let reduce = cards.reduce(function (accumulator, card) {
+   //      if (card.cardSuit==='spades'){
+   //          accumulator.spades.push(card);
+   //
+   //      }else  if (card.cardSuit==='diamonds'){
+   //          accumulator.diamonds.push(card);
+   //
+   //      }else  if (card.cardSuit==='hearts'){
+   //          accumulator.hearts.push(card);
+   //
+   //      } else  if (card.cardSuit==='clubs'){
+   //              accumulator.clubs.push(card);
+   //      }
+   //  return accumulator;
+   //
+   //  },{spades:[], diamonds:[], hearts:[], clubs:[]});
+   //  console.log(reduce);
 
 
 </script>
