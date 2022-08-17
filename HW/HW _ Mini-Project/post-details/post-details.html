@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+
+        .post{
+            color: black;
+            border: black solid 1px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 0, 0.41);
+            gap: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content:space-evenly;
+            box-shadow: black 1px 1px 8px;
+            margin-bottom: 40px;
+        }
+        .comments{
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .comment{
+            color: black;
+            border: black solid 1px;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: black 1px 1px 8px;
+            background-color: rgba(0, 255, 255, 0.27);
+            height: 500px;
+            width: 18.5%;
+            margin: 10px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .comment>p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="post"></div>
+
+<div class="comments"></div>
+
+<script src="post-details.js"></script>
+</body>
+</html>
