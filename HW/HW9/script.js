@@ -234,9 +234,15 @@ function sleeping(time) {
 //         console.log('Сон до', timeAfter, 'години ранку');
 //
 //     })
+//
+//     .catch(reason => {
+//         console.warn('Щось пішло не так!!!',reason)
+//     })
 
 
 async function routine() {
+    try {
+
     const time = await beginDay (true);
     console.log('Початок дня о', time, 'годині')
 
@@ -269,6 +275,10 @@ async function routine() {
 
     const sleep = await sleeping(go);
     console.log('Сон до', sleep, 'години ранку');
+
+    }catch (e) {
+        console.warn('Щось пішло не так!!!',e)
+    }
 
 }
 routine();
